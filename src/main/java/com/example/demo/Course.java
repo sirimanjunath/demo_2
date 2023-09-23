@@ -1,6 +1,6 @@
 package com.example.demo;
 
-public class Model {
+public class Course {
         private String CourseName;
         private String CourseId;
         private String CourseCategory;
