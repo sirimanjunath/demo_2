@@ -9,16 +9,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@EnableJpaRepositories("com.baeldung.persistence.repo")
+//@EnableJpaRepositories("com.baeldung.persistence.repo")
 @EntityScan("com.baeldung.persistence.model")
+@EnableJpaRepositories("com.example.demo.books.BookRepository")
 @SpringBootApplication
+@ComponentScan("com.example.demo")
 public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-
 	}
 
 	@Bean
